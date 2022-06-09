@@ -184,7 +184,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/layout_mergin_10"
             android:fontFamily="@font/averta_bold"
             android:text="@string/txt_signup_to_find_rabbit"
             android:textColor="@color/light_gray"
@@ -303,6 +303,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
             android:weightSum="3">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -311,8 +313,6 @@
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/layout_mergin_10"
-                android:paddingBottom="@dimen/layout_mergin_5"
                 app:endIconMode="clear_text"
                 app:hintEnabled="false"
                 app:boxStrokeColor="@color/black">
@@ -334,12 +334,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="@color/purple_200"
+                android:backgroundTint="@color/black"
                 android:gravity="center"
                 android:textSize="12sp"
+                android:layout_marginStart="@dimen/layout_mergin_5"
                 android:fontFamily="@font/averta_semibold"
                 android:text="@string/send_code"
-                android:layout_margin="@dimen/layout_mergin_5"
+                android:textColor="@color/white"
                 android:textAllCaps="true"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
