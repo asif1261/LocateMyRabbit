@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbars="none">
 
     <LinearLayout
@@ -35,24 +36,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="@dimen/layout_mergin_40"
             android:fontFamily="@font/averta_semibold"
-            android:text="@string/placeholder"
+            android:text="@string/user_name"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
-        <EditText
-            android:id="@+id/txt_email"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/averta_semibold"
-            android:hint="hint"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/black"
-            android:textColorHint="@color/light_gray"
-            android:textSize="16sp" />
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/user_name"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:layout_width="match_parent"
@@ -65,22 +76,35 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/averta_semibold"
-            android:text="@string/placeholder"
+            android:text="@string/password"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
-        <EditText
-            android:id="@+id/txt_password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/averta_semibold"
-            android:hint="hint"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:textColorHint="@color/light_gray"
-            android:textSize="16sp" />
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:layout_width="match_parent"
@@ -104,7 +128,7 @@
             android:backgroundTint="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/layout_mergin_20"
             android:fontFamily="@font/averta_bold"
             android:text="@string/txt_signin"
             android:textAllCaps="true"

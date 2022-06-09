@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_mergin_5">5dp</dimen>
+    <dimen name="layout_mergin_10">10dp</dimen>
+    <dimen name="layout_mergin_20">20dp</dimen>
+    <dimen name="layout_mergin_30">30</dimen>
+    <dimen name="layout_mergin_40">40</dimen>
+</resources>

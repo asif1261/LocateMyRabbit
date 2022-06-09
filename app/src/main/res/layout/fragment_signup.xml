@@ -2,9 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbars="none">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -159,7 +160,339 @@
             app:SpinKit_Color="@color/black" />
 
 
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="60dp">
+
+        <ImageView
+            android:id="@+id/login_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:src="@drawable/perky_rabbit"
+            android:textSize="30sp"
+            android:contentDescription="@string/placeholder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/averta_bold"
+            android:text="@string/txt_signup_to_find_rabbit"
+            android:textColor="@color/light_gray"
+            android:textSize="16sp" />
+
+        <!-- First name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_40"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/first_name"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_firstname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/user_name"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Last Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_10"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/last_name"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_lastname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_10"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/email"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Verification Code -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_10"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/verification_code"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_vfCode"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/layout_mergin_10"
+                android:paddingBottom="@dimen/layout_mergin_5"
+                app:endIconMode="clear_text"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/black">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tie_vfCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/verification_code"
+                    android:inputType="numberPassword"
+                    android:maxLength="@integer/material_motion_duration_long_1"
+                    android:padding="15dp"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_vfCode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/send_code"
+                android:layout_margin="@dimen/layout_mergin_5"
+                android:textAllCaps="true"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <!-- User Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_10"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/user_name"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/user_name"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_10"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/password"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Retype Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_10"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/retype_password"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_retypePassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/layout_mergin_10"
+            android:paddingBottom="@dimen/layout_mergin_5"
+            app:endIconMode="password_toggle"
+            app:hintEnabled="false"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"
+            app:boxStrokeColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tie_retypePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/retype_password"
+                android:inputType="textPassword"
+                android:maxLength="@integer/material_motion_duration_long_1"
+                android:padding="15dp"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/averta_semibold"
+            android:text=""
+            android:textColor="@color/colorError"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Widget.Material3.Button"
+            android:backgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_mergin_20"
+            android:fontFamily="@font/averta_bold"
+            android:text="@string/txt_signup"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/txt_no_account_signin"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
     </LinearLayout>
-
-
 </ScrollView>
