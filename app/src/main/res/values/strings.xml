@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LocateMyRabbit</string>
+    <string name="txt_signin">SignIn</string>
+    <string name="txt_no_account_signup">Don\'t have an account? <font color="#FF3700B3">Register Now</font></string>
+    <string name="please_wait">Please wait..</string>
+    <string name="txt_login">Login to find your rabbit</string>
+    <string name="placeholder">Placeholder</string>
 </resources>
