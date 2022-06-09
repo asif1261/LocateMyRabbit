@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="txt_signin">SignIn</string>
-    <string name="txt_no_account_signup">Don\'t have an account? <font color="#2196F3">Register Now</font></string>
+    <string name="txt_no_account_signup">Don\'t have an account? <font color="#FFFFFF">Register Now</font></string>
+    <string name="txt_no_account_signin">Already have an account? <font color="#FFFFFF">Signin Now</font></string>
 </resources>
