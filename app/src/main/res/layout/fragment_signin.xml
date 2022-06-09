@@ -36,8 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
-            android:fontFamily="@font/sf_pro_display_regular"
-            android:text="@string/txt_email"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/placeholder"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/sf_pro_display_semibold"
-            android:hint="@string/txt_email_hint"
+            android:fontFamily="@font/averta_semibold"
+            android:hint="hint"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"
@@ -64,8 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_display_regular"
-            android:text="@string/txt_password"
+            android:fontFamily="@font/averta_semibold"
+            android:text="@string/placeholder"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
@@ -75,8 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/sf_pro_display_semibold"
-            android:hint="@string/txt_password_hint"
+            android:fontFamily="@font/averta_semibold"
+            android:hint="hint"
             android:inputType="textPassword"
             android:textColor="@color/black"
             android:textColorHint="@color/light_gray"
