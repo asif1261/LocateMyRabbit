@@ -216,7 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="10dp"
-                android:hint="@string/user_name"
+                android:hint="@string/first_name"
                 android:inputType="textPersonName"
                 android:maxLength="@integer/material_motion_duration_long_1"
                 android:padding="15dp"
